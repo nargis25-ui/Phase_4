@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101827">
+  <title>AI-Powered Content Generator</title>
+  <link rel="stylesheet" href="content.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">
+      <span class="brand-icon">✦</span>
+      <span>Content<span class="accent">AI</span></span>
+    </a>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">YOUR CREATIVE AI WORKSPACE</p>
+      <h1>Ideas into words.<br><span>Words into impact.</span></h1>
+      <p class="subtitle">
+        Ask questions, summarize text, discover ideas,
+        and understand new concepts with AI.
+      </p>
+    </section>
+
+    <section class="workspace">
+      <div class="feature-list">
+        <button class="feature active" data-mode="ask" type="button">
+          <span>✦</span> Ask Me Anything
+        </button>
+        <button class="feature" data-mode="summarize" type="button">
+          <span>▤</span> Quick Summarizer
+        </button>
+        <button class="feature" data-mode="ideas" type="button">
+          <span>✧</span> Idea Spark
+        </button>
+        <button class="feature" data-mode="define" type="button">
+          <span>◈</span> Definition Finder
+        </button>
+      </div>
+
+      <div class="generator">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">CONTENT STUDIO</p>
+            <h2 id="modeTitle">Ask Me Anything</h2>
+          </div>
+          <span class="mode-tag" id="modeTag">Q&A</span>
+        </div>
+
+        <form id="generatorForm">
+          <label for="userInput" id="inputLabel">What would you like to know</label>
+
+          <textarea id="userInput"rows="5"maxlength="12000"placeholder="Ask anything..."required></textarea>
+
+          <div class="input-footer">
+            <span id="inputHint">Be curious. Ask anything.</span>
+            <span id="charCount">0 / 12000</span>
+          </div>
+
+          <button class="generate-btn" id="generateBtn" type="submit">
+            <span id="buttonText">Generate Answer</span>
+            <span aria-hidden="true">→</span>
+          </button>
+        </form>
+
+        <section class="result-card" aria-live="polite">
+          <div class="result-header">
+            <h3>✨ Your AI Result</h3>
+            <div class="result-actions">
+              <button id="copyBtn" type="button" disabled>Copy</button>
+              <button id="clearBtn" type="button">Clear</button>
+            </div>
+          </div>
+
+          <p id="resultPlaceholder"> Your generated content will appear here.</p>
+          <div id="result" class="result-text"></div>
+          <p id="errorMessage" class="error" role="alert"></p>
+        </section>
+      </div>
+    </section>
+
+    <footer>Built with HTML, CSS, JavaScript &amp; Gemini AI</footer>
+  </main>
+   <script src="content.js" defer></script>
+</body>
+</html>
+
+
